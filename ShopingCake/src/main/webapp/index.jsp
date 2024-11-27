@@ -64,26 +64,9 @@
 								<button type="submit" class="site-btn">TÌM KIẾM</button>
 							</form>
 						</div>
-						<div class="hero__search__phone">
-							<div class="hero__search__phone__icon">
-								<i class="fa fa-phone"></i>
-							</div>
-							<div class="hero__search__phone__text">
-								<h5>012345678</h5>
-								<span>Hộ trợ 24/7</span>
-							</div>
-						</div>
 					</div>
 					<div class="hero__item set-bg"
-						data-setbg="viewroot/img/banner/banner.jpg">
-						<div class="hero__text">
-							<span>NGỌT NGÀO</span>
-							<h2>
-								Cake Ice Cream <br />100% Organic
-							</h2>
-							<p>Ngọt Ngào Từ Trái Tim -Đậm Đà Từ Hướng vị</p>
-							<a href="#" class="primary-btn">Bắt Đầu</a>
-						</div>
+						data-setbg="https://nhathuochuymai.vn/wp-content/uploads/2023/10/Quy-trinh-ban-thuoc-theo-don.jpg">
 					</div>
 				</div>
 			</div>
@@ -469,74 +452,7 @@
 	</section>
 	<!-- Latest Product Section End -->
 
-	<!-- Blog Section Begin -->
-	<section class="from-blog spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title from-blog__title">
-						<h2>Góc Hồn Thơ</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="blog__item">
-						<div class="blog__item__pic">
-							<img src="viewroot/img/blog/blog-1.jpg" alt="">
-						</div>
-						<div class="blog__item__text">
-							<ul>
-								<li><i class="fa fa-calendar-o"></i> 10-20-2021</li>
-								<li><i class="fa fa-comment-o"></i> 5</li>
-							</ul>
-							<h5>
-								<a href="#">Bánh của sử ngọt ngào</a>
-							</h5>
-							<p>Bánh mang đến vị ngọt của thiên nhiên và vẻ đẹp của sự
-								xanh ngọt của bánh</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="blog__item">
-						<div class="blog__item__pic">
-							<img src="viewroot/img/blog/blog-2.jpg" alt="">
-						</div>
-						<div class="blog__item__text">
-							<ul>
-								<li><i class="fa fa-calendar-o"></i>10-20-2021</li>
-								<li><i class="fa fa-comment-o"></i> 5</li>
-							</ul>
-							<h5>
-								<a href="#">Sản phẩm tốt từ bạn</a>
-							</h5>
-							<p>Ngọt ngào từ trái tim - tình yêu như miếng bánh ngọt ngào
-								trái tim bé nhở như nàng thơ ngọt ngào</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="blog__item">
-						<div class="blog__item__pic">
-							<img src="viewroot/img/blog/blog-3.jpg" alt="">
-						</div>
-						<div class="blog__item__text">
-							<ul>
-								<li><i class="fa fa-calendar-o"></i> 10-20-2021</li>
-								<li><i class="fa fa-comment-o"></i> 5</li>
-							</ul>
-							<h5>
-								<a href="#">Bánh làm từ trái tim đầu bếp</a>
-							</h5>
-							<p>Ngọt ngào từ trái tim - tình yêu như miếng bánh ngọt ngào
-								trái tim bé nhở như nàng thơ ngọt ngào</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 
 	<!-- Thêm chân trang -->
 	<jsp:include page="layout/footer.jsp"></jsp:include>
