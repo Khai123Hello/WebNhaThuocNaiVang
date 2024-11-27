@@ -20,7 +20,7 @@ public class DBConnect {
 	public void KetNoi() throws Exception{
 		String hostName = "localhost";
 		String database = "WebBanHang";
-		String userName = "sa2";
+		String userName = "sa";
 		String password = "123456";
 		// Xac dinh he quan tri co so du lieu
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
