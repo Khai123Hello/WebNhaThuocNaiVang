@@ -1,9 +1,0 @@
-Bước 1 import file tải về cho eclipse; https://www.youtube.com/watch?v=D8NCaYGFtss
-Bước 2 add thư viện vào trong project;https://www.youtube.com/watch?v=z34P7Fo7bAw
-bước 3: Khởi động tomcat; https://www.youtube.com/watch?v=PH-bK3g2YmU
-Bước 4: import file CSDL :https://www.youtube.com/watch?v=34DQIR577m4
-Bước 5 thảy đổi thông tin kết nối ở :DBConnect.java để thông tin :( nếu chưa mở cổng 1433 :https://www.youtube.com/watch?v=MyXn54pFJYI)
-bước 6: Thảy đổi mail gửi thông tin về :( mail được mở kết nối ứng dụng an toan https://thuthuataz.net/bat-ung-dung-kem-an-toan-gmail-50)
-bước 7: thảy đổi thông tin ở SendMail(: và mở câu lệnh ở HomeBillServlet.java;
-Bước 8: good luck nhé:
-
