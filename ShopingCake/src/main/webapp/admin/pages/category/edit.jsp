@@ -66,7 +66,7 @@
                                     </div>
                                      <div class="form-actions form-group">
                                         <button type="submit" class="btn btn-success">Lưu lại</button>
-                                       <button type="submit" class="btn btn-danger"name="huy" onclick="history.go(-1);">Hủy bỏ</button>
+										<button type="button" class="btn btn-danger" onclick="history.back();">Hủy bỏ</button>
                                     </div>
                                     	</div>
                                     </div>
