@@ -21,11 +21,16 @@ public class DBConnect {
 		String hostName = "localhost";
 		String database = "WebBanHang";
 <<<<<<< HEAD
+		String userName = "sa";
+		String password = "123456";
+=======
+<<<<<<< HEAD
 		String userName = "thanhhoa";
 		String password = "123";
 =======
 		String userName = "sa";
 		String password = "1234567";
+>>>>>>> main
 >>>>>>> main
 		// Xac dinh he quan tri co so du lieu
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
