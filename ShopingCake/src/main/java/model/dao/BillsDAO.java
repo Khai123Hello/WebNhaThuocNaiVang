@@ -45,6 +45,40 @@ public class BillsDAO {
 		return lst;
 
 	}
+	
+	// Lấy ra toàn bộ bill dựa trên email
+		public ArrayList<Bills> getToanBoBillDuaEmail(String userEmail) {
+			DBConnect cs = new DBConnect();
+			ArrayList<Bills> lst = new ArrayList<Bills>();
+			try {
+				cs.KetNoi();
+				String sql = " SELECT * FROM HOADON where email = ?";
+				PreparedStatement cmd = cs.cn.prepareStatement(sql);
+				cmd.setString(1, userEmail);
+				ResultSet rs = cmd.executeQuery();
+				while (rs.next()) {
+					Bills bill = new Bills();
+					bill.setId(rs.getLong("id"));
+					bill.setHoTen(rs.getString("hoten"));
+					bill.setSoNha(rs.getString("sonha"));
+					bill.setDiaChi(rs.getString("diachi"));
+					bill.setSoDienThoai(rs.getString("dienthoai"));
+					bill.setEmail(rs.getString("email"));
+					bill.setGhiChu(rs.getString("ghichu"));
+					bill.setTrangThai(rs.getInt("trangthai"));
+					bill.setNgayDat(rs.getString("ngaydat"));
+					lst.add(bill);
+				}
+				// đống kết nối
+				rs.close();
+				cs.cn.close();
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			return lst;
+
+		}
 
 	// đổ ra list admin hóa đơn- với trạng thái đặt hàng + ship
 	public ArrayList<Bills> getSelectDatHang_Ship() {
