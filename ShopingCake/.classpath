@@ -13,5 +13,8 @@
 	<classpathentry kind="lib" path="D:/Study/UTE/Softwaretechnology/Project/Product/WebThuocNaiVang/WebNhaThuocNaiVang/ShopingCake/src/main/webapp/WEB-INF/lib/commons-io-2.11.0.jar"/>
 	<classpathentry kind="lib" path="D:/Study/UTE/Softwaretechnology/Project/Product/WebThuocNaiVang/WebNhaThuocNaiVang/ShopingCake/src/main/webapp/WEB-INF/lib/javax.mail.jar"/>
 	<classpathentry kind="lib" path="D:/Study/UTE/Softwaretechnology/Project/Product/WebThuocNaiVang/WebNhaThuocNaiVang/ShopingCake/src/main/webapp/WEB-INF/lib/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="D:/Study/UTE/Softwaretechnology/Project/Product/WebThuocNaiVang/WebNhaThuocNaiVang/ShopingCake/src/main/webapp/WEB-INF/lib/angus-activation-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Study/UTE/Softwaretechnology/Project/Product/WebThuocNaiVang/WebNhaThuocNaiVang/ShopingCake/src/main/webapp/WEB-INF/lib/jakarta.activation-api-2.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Study/UTE/Softwaretechnology/Project/Product/WebThuocNaiVang/WebNhaThuocNaiVang/ShopingCake/src/main/webapp/WEB-INF/lib/jakarta.mail-2.0.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

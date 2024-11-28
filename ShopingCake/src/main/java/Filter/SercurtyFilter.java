@@ -38,7 +38,8 @@ public class SercurtyFilter implements Filter {
 			filterChain.doFilter(request, response);
 		}
 
-		String[] listpath = { "/Home", "/HomeProductsServlet", "/blog.jsp", "/contact.jsp", "/login.jsp", "/view-bill.jsp",
+		String[] listpath = { "/Home", "/HomeProductsServlet", "/blog.jsp", "/contact.jsp", "/login.jsp", "/view-bill.jsp", "/forgot_password.jsp",
+				"/ChangePasswordServlet", "/otp_code.jsp", "/change_password.jsp",
 				"/UsersLoginServlet", "/shoping-cart.jsp","/HomeCartServlet" ,"/HomeSearchProduct","/UsersRegisterServlet","/HomeProductsDetail"};
 		String[] listpathUser = { "/HomeUserProfileServlet", "/UserEditAvata", "/HomeUserProfileServlet","/account.jsp",
 				"/checkout.jsp","/HomeCheckoutServlet", "/HomeBillServlet","/UsersLogoutServlet"};
