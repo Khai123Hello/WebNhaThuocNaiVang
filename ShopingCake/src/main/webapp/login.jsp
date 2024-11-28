@@ -64,6 +64,7 @@
         </label>
         <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" id="pwd" name="user-password" placeholder="Password" required="" type="password"/>
        </div>
+<<<<<<< HEAD
        <!-- Hiển thị thông báo lỗi nếu có -->
        <%
           String error = (String) session.getAttribute("errorlogin");
@@ -76,6 +77,11 @@
           session.removeAttribute("errorlogin"); // Xóa thông báo sau khi hiển thị
           }
        %>
+=======
+       <div class="mt-3 text-center">
+							<h6><a href="forgot_password.jsp" style="text-decoration: none">Quên mật khẩu?</a></h6>
+						</div>
+>>>>>>> main
        <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700" type="submit">
         Login
        </button>

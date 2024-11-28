@@ -10,7 +10,9 @@ package model.dao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 import model.bean.Users;
 
@@ -124,7 +126,51 @@ public class UsersDAO {
 		}
 		return false;
 	}
+	
+	// Phương thức lấy email
+	public List<String> getAllEmail() {
+		DBConnect cs = new DBConnect();
+		List<String> list = new ArrayList<>();
+		try {
+			try {
+				cs.KetNoi();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			String query = "select email from taikhoan";
+			Statement statement = cs.cn.createStatement();
+			ResultSet set = statement.executeQuery(query);
+			while (set.next()) {
+				list.add(set.getString(1));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 
+	// Phương thức cập nhật mật khẩu khi quên mật khẩu
+	public void updateUserPasswordByEmail(String password, String mail) {
+		DBConnect cs = new DBConnect();
+		try {
+			try {
+				cs.KetNoi();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			String sql = "update taikhoan set matkhau = ? where email = ?";
+			PreparedStatement psmt = cs.cn.prepareStatement(sql);
+			psmt.setString(1, password);
+			psmt.setString(2, mail);
+			
+			psmt.executeUpdate();
+			cs.cn.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	// Phương thức cập nhật tên hiển thị cho người dùng/ giao diện trang chủ/cá nhân
 	public boolean editDisplayNameAccount(String displayName, long id) throws Exception {
 		DBConnect cs = new DBConnect();
