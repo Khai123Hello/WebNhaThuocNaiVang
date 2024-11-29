@@ -25,9 +25,9 @@
 	<!-- Thêm phần tiêu đề trang -->
 	<jsp:include page="layout/header.jsp"></jsp:include>
 	<!-- Xong phần tiêu đề trang -->
+
 	<!-- Hero Section Begin -->
-		<jsp:include page="layout/hero-nomar.jsp"></jsp:include>
-	
+	<jsp:include page="layout/hero-nomar.jsp"></jsp:include>
 	<!-- Hero Section End -->
 
 	<!-- Breadcrumb Section Begin -->
@@ -65,29 +65,22 @@
 							<!--left col-->
 							<form method="POST" action="UserEditAvata"
 								enctype="multipart/form-data">
-								<div class="form-group">
-									<div class="text-center">
-										<img src="viewroot/img/testimonial/<%=us.getAnhChinh()%>"
-											class="avatar img-circle img-thumbnail" alt="avatar"
-											name="link-img">
-										<h4>
-											<br><%=us.getTenHienThi()%>
-										</h4>
-										<input id="file-up-avatar" type="file"
-											class="text-center center-block file-upload" name="file">
-										<input value="<%=us.getTenTaiKhoan()%>" name="user-name"
-											type="hidden">
-									</div>
+								<div class="form-group text-center">
+									<img src="viewroot/img/testimonial/<%=us.getAnhChinh()%>"
+										class="avatar img-circle img-thumbnail" alt="avatar"
+										name="link-img">
+									<h4><%=us.getTenHienThi()%></h4>
+									<input id="file-up-avatar" type="file"
+										class="text-center center-block file-upload" name="file">
+									<input value="<%=us.getTenTaiKhoan()%>" name="user-name"
+										type="hidden">
 								</div>
-								<div class="form-group">
-									<div class="col-xs-12 text-center">
-										<button class="btn btn-info" type="submit">
-											<i class="fa fa-edit"></i> Thay hình đại diện
-										</button>
-									</div>
+								<div class="form-group text-center">
+									<button class="btn btn-info" type="submit">
+										<i class="fa fa-edit"></i> Thay hình đại diện
+									</button>
 								</div>
 							</form>
-
 						</div>
 						<!--/col-3-->
 						<div class="col-sm-8">
@@ -116,60 +109,45 @@
 
 								<form class="form" action="HomeUserProfileServlet" method="post">
 									<div class="form-group">
-										<div class="col-xs-6">
-											<label><h4>Tài khoản</h4></label> <input type="text"
-												class="form-control" placeholder="Tài khoản"
-												title="Nhập vào tên tài khoản."
-												value="<%=us.getTenTaiKhoan()%>" disabled>
-										</div>
+										<label for="username"><h4>Tài khoản</h4></label>
+										<input type="text" class="form-control" id="username"
+											placeholder="Tài khoản" title="Nhập vào tên tài khoản."
+											value="<%=us.getTenTaiKhoan()%>" disabled>
 									</div>
-									<input value="<%=us.getTenTaiKhoan()%>" name="user-name"
-										hidden=""> <input value="<%=us.getId()%>" name="id"
-										type="hidden">
+									<input value="<%=us.getTenTaiKhoan()%>" name="user-name" hidden="">
+									<input value="<%=us.getId()%>" name="id" type="hidden">
 									<div class="form-group">
-										<div class="col-xs-6">
-											<label for="email"><h4>Email</h4></label> <input type="email"
-												class="form-control" name="email" placeholder="Email"
-												title="Nhập vào email." value="<%=us.getEmail()%>" disabled>
-										</div>
+										<label for="email"><h4>Email</h4></label>
+										<input type="email" class="form-control" id="email" name="email"
+											placeholder="Email" title="Nhập vào email." value="<%=us.getEmail()%>"
+											disabled>
 									</div>
 									<div class="form-group">
-										<div class="col-xs-6">
-											<label><h4>
-													<br>Tên hiển thị
-												</h4></label> <input type="text" class="form-control" name="view-name"
-												placeholder="Tên hiển thị" title="Nhập vào tên hiển thị."
-												value="<%=us.getTenHienThi()%>" required>
-										</div>
+										<label for="view-name"><h4>Tên hiển thị</h4></label>
+										<input type="text" class="form-control" id="view-name" name="view-name"
+											placeholder="Tên hiển thị" title="Nhập vào tên hiển thị."
+											value="<%=us.getTenHienThi()%>" required>
 									</div>
 									<div class="form-group">
-										<div class="col-xs-6">
-											<br> <label><h4>Mật khẩu</h4></label> <input
-												type="password" class="form-control" name="password"
-												placeholder="Mật khẩu" title="Nhập vào mật khẩu." value=""
-												required>
-										</div>
+										<label for="password"><h4>Mật khẩu</h4></label>
+										<input type="password" class="form-control" id="password" name="password"
+											placeholder="Mật khẩu" title="Nhập vào mật khẩu." value="" required>
 									</div>
-									<div class="form-group">
-										<div class="col-xs-12 text-center">
-											<br>
-											<button class="btn btn-success" type="submit">
-												<i class="fa fa-edit"></i> Lưu lại
-											</button>
-											<button class="btn btn-lg" type="reset">
-												<i class="fa fa-undo"></i> Nhập lại
-											</button>
-										</div>
+									<div class="form-group text-center">
+										<button class="btn btn-success" type="submit">
+											<i class="fa fa-edit"></i> Lưu lại
+										</button>
+										<button class="btn btn-secondary" type="reset">
+											<i class="fa fa-undo"></i> Nhập lại
+										</button>
 									</div>
 								</form>
 							</div>
 							<%
 							} else {
 							%>
-							<div class="alert alert-danger">
-								<strong><center>Tài khoản đã được đăng xuất!</strong>Bạn
-								vui lòng đăng nhập để dùng tính năng này.
-								</center>
+							<div class="alert alert-danger text-center">
+								<strong>Tài khoản đã được đăng xuất!</strong> Bạn vui lòng đăng nhập để dùng tính năng này.
 							</div>
 							<%} %>
 							<!--/tab-pane-->

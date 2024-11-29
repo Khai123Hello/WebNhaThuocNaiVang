@@ -37,31 +37,25 @@ public class AdminAddCategory extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-	        throws ServletException, IOException {
-	    request.setCharacterEncoding("UTF-8");
-	    response.setCharacterEncoding("UTF-8");
-	    response.setContentType("text/html; charset=UTF-8");
-	    
-	    Category category = new Category();
-	    category.setTenLoaiSanPham(request.getParameter("tenloai"));
-	    CategoryBO categoryControl = new CategoryBO();
-	    boolean check = categoryControl.addCategory(category);
-
-	    // Điều hướng dựa trên kết quả, sử dụng sendRedirect hoặc forward, không cả hai.
-	    if (check) {
-	        HttpSession session = request.getSession();
-	        session.setAttribute("Add", "Success");
-	        session.setMaxInactiveInterval(15);
-	        response.sendRedirect("AdminListCategory");  // Dùng sendRedirect nếu muốn chuyển hướng qua URL mới
-	        return; // Dừng lại sau khi gửi redirect
-	    }
-
-	    // Nếu không thành công, thông báo lỗi và chuyển tiếp
-	    request.setAttribute("error", "Thêm loại sản phẩm không thành công.");
-	    RequestDispatcher dispatcher = request.getRequestDispatcher("admin/pages/category/add.jsp");
-	    dispatcher.forward(request, response);  // Dùng forward nếu muốn giữ nguyên URL hiện tại
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		Category category = new Category();
+		category.setTenLoaiSanPham(request.getParameter("tenloai"));
+		CategoryBO categoryControl = new CategoryBO();
+		boolean check = categoryControl.addCategory(category);
+		if(check==true) {
+			HttpSession session = request.getSession();
+			session.setAttribute("Add", "Success");
+			session.setMaxInactiveInterval(15);
+			response.sendRedirect("AdminListCategory");
+		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher("AdminListCategory");
+		dispatcher.forward(request, response);
+		
+		
 	}
-
 
 }

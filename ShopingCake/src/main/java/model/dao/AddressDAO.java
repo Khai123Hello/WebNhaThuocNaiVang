@@ -20,7 +20,6 @@ import model.bean.Xa_Phuong;
  *
  */
 public class AddressDAO {
-	// Láº¥y toĂ n bá»™ tá»‰nh thĂ nh phá»‘
 	public ArrayList<Tinh_ThanhPho> getTinhThanhPho() {
 		DBConnect cs = new DBConnect();
 		ArrayList<Tinh_ThanhPho> lst = new ArrayList<Tinh_ThanhPho>();
@@ -37,7 +36,6 @@ public class AddressDAO {
 				tinh_thanhpho.setTen(rs.getString("ten"));
 				tinh_thanhpho.setTendaydu(rs.getString("tendaydu"));
 				tinh_thanhpho.setTenkhongdau(rs.getString("tenkhongdau"));
-				// ThĂªm vĂ o danh sĂ¡ch
 				lst.add(tinh_thanhpho);
 			}
 			rs.close();
@@ -50,7 +48,6 @@ public class AddressDAO {
 		return lst;
 	}
 
-	// Láº¥y toĂ n bá»™ quáº­n/ huyá»‡n theo id tá»‰nh
 	public ArrayList<Quan_Huyen> getQuanHuyenById(long idTinhTP) {
 		DBConnect cs = new DBConnect();
 		ArrayList<Quan_Huyen> lst = new ArrayList<Quan_Huyen>();
@@ -83,7 +80,6 @@ public class AddressDAO {
 		return lst;
 	}
 
-	// Láº¥y toĂ n bá»™ xĂ£ phÆ°á»�ng theo id huyá»‡n
 	public ArrayList<Xa_Phuong> getXaPhuongById(long idQuanHuyen) {
 		DBConnect cs = new DBConnect();
 		ArrayList<Xa_Phuong> lst = new ArrayList<Xa_Phuong>();
@@ -104,7 +100,6 @@ public class AddressDAO {
 				xa_phuong.setTenHanhChinh(rs.getString("tenhanhchinh"));
 				xa_phuong.setTenKhongDau(rs.getString("tenkhongdau"));
 				xa_phuong.setTenThuong(rs.getString("tenthuong"));
-				// ThĂªm vĂ o danh sĂ¡ch
 				lst.add(xa_phuong);
 			}
 			rs.close();
