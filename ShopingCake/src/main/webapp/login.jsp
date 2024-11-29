@@ -33,7 +33,7 @@
      Login/Register
     </h2>
     <div class="text-gray-600">
-     <a class="hover:underline" href="./index.html">
+     <a class="hover:underline" href="Home">
       Home
      </a>
      <span>
@@ -122,7 +122,7 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-4 text-center">
    <p>
-    © 2023 Your Website. All rights reserved.
+    © 2024 Your Website. All rights reserved.
    </p>
   </footer>
  </body>

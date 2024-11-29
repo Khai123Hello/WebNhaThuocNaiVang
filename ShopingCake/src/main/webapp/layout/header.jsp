@@ -15,6 +15,30 @@
 <head>
 <meta charset="utf-8">
 <title>NHÀ THUỐC NAI VÀNG</title>
+<style>
+
+.custom-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa logo và chữ */
+}
+
+.custom-logo img {
+    width: 50px; /* Điều chỉnh kích thước ảnh */
+    height: 50px; /* Điều chỉnh kích thước ảnh */
+    object-fit: contain; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+.custom-logo .navbar-brand {
+    font-size: 20px; /* Kích thước chữ */
+    font-weight: bold; /* Đậm chữ */
+    color: #10a167; /* Màu chữ */
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    text-transform: uppercase; /* Viết hoa toàn bộ */
+    letter-spacing: 2px; /* Khoảng cách giữa các chữ cái */
+}
+</style>
+
 </head>
 <body>
 	<%
@@ -29,7 +53,10 @@
 	<div class="humberger__menu__overlay"></div>
 	<div class="humberger__menu__wrapper">
 		<div class="humberger__menu__logo">
-			<a href="#"><img src="" alt="NHÀ THUỐC NAI VÀNG"></a>
+			<div class="header__logo custom-logo">
+				<img id="logo_image" src="https://drive.google.com/file/d/15DSVmT_n_NFrcvgohWs5087c55FXFodw/view?usp=sharing" alt="logo" />
+				<span class="brand-name">NHÀ THUỐC NAI VÀNG</span>
+			</div>
 		</div>
 		<div class="humberger__menu__cart">
 			<ul>
@@ -54,9 +81,9 @@
 				<li><a href="./shop-grid.html">Sản phẩm</a></li>
 				<li><a href="#">Thuốc</a>
 					<ul class="header__menu__dropdown">
-						<li><a href="./shop-details.html">Shop Details</a></li>
-						<li><a href="./shoping-cart.html">Shoping Cart</a></li>
-						<li><a href="./checkout.html">Check Out</a></li>
+						<li><a href="./shop-details.html">Chi tiết sản phẩm</a></li>
+						<li><a href="./shoping-cart.html">Giỏ hàng</a></li>
+						<li><a href="./checkout.html">Thanh toán</a></li>
 					</ul></li>
 				<!-- Removed Blog and Liên Hệ menu items -->
 			</ul>
@@ -79,7 +106,8 @@
 					<div class="col-lg-6 col-md-6">
 						<div class="header__top__right">
 							<div class="header__top__right__auth">
-								<a href="view-bill.jsp"><i class="fa fa-bell"></i>Xem hóa đơn</a>
+								<a href="view-bill.jsp"><i class="fa fa-bell"></i>Xem hóa
+									đơn</a>
 							</div>
 							<div class="header__top__right__auth">
 								<%
@@ -111,13 +139,15 @@
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="header__logo">
-						<a href="Home"><img src="" alt="NHÀ THUỐC NAI VÀNG"></a>
+						<div class="header__logo custom-logo">
+							<a class="navbar-brand" href="Home"><img src="viewroot/img/logo/deer_logo.png" alt="Logo" >NHÀ THUỐC NAI VÀNG</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<nav class="header__menu">
 						<ul>
-							<li class="active"><a href="Home">HOME</a></li>
+							<li class="active"><a href="Home">TRANG CHỦ</a></li>
 							<li><a href="HomeProductsServlet">SẢN PHẨM</a></li>
 							<li><a href="#">THUỐC</a>
 								<ul class="header__menu__dropdown">
@@ -146,7 +176,6 @@
 						}
 						%>
 						<ul>
-							<li><a href="#"><i class="fa fa-heart"></i> <span>99</span></a></li>
 							<li><a id="cart" href="shoping-cart.jsp"><i
 									class="fa fa-shopping-bag"></i> <span id="count"><%=cart.countItems()%></span></a></li>
 						</ul>
@@ -161,10 +190,6 @@
 			</div>
 		</div>
 	</header>
-
-	<!-- Xong tiêu đề -->
-	<!-- Cài đặt xem trên thiết bị di động -->
-	<!-- Xong cài đặt xem trên thiết bị di động -->
 
 </body>
 </html>

@@ -15,7 +15,7 @@
 <meta name="keywords" content="Ogani, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Cake Ice Cream</title>
+<title>Nhà thuốc Nai Vàng</title>
 <!-- Thêm chân trang -->
 <jsp:include page="layout/head.jsp"></jsp:include>
 <!-- Xong thêm chân trang -->
@@ -105,7 +105,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="section-title">
-						<h2>Sản phẩm nỗi bật</h2>
+						<h2>Sản phẩm nổi bật</h2>
 					</div>
 					<div class="featured__controls">
 						<ul>
@@ -137,7 +137,6 @@
 						<div class="featured__item__pic set-bg"
 							data-setbg="viewroot/img/shop/product/<%=ls.getAnhChinh()%>">
 							<ul class="featured__item__pic__hover">
-								<li><a href="#"><i class="fa fa-heart"></i></a></li>
 								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
 								<li><a onclick="addProductToCart(<%=ls.getId()%>)"><i
 										class="fa fa-shopping-cart"></i></a></li>

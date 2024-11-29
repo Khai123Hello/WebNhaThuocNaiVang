@@ -17,7 +17,7 @@
 <style>
 .table-head {
 	color: white;
-	background-color: #7fad39 !important;
+	background-color: #0ceb9c !important;
 }
 
 h2 {
@@ -28,11 +28,11 @@ h2 {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	background-color: #7fad39;
+	background-color: #0ceb9c;
 }
 
 .back-button:hover {
-	background-color: #abdb60;
+	background-color: #0cebb0;
 }
 </style>
 </head>
