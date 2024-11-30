@@ -11,14 +11,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Danh sách hóa đơn</title>
-<!-- Bootstrap CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <style>
 .table-head {
 	color: white;
-	background-color: #7fad39 !important;
+	background-color: #0ceb9c !important;
 }
 
 h2 {
@@ -29,11 +28,11 @@ h2 {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	background-color: #7fad39;
+	background-color: #0ceb9c;
 }
 
 .back-button:hover {
-	background-color: #abdb60;
+	background-color: #0cebb0;
 }
 </style>
 </head>
@@ -128,8 +127,6 @@ h2 {
 		}
 		%>
 	</div>
-
-	<!-- Bootstrap JS -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

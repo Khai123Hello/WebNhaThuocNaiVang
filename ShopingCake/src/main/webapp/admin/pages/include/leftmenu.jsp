@@ -26,9 +26,6 @@
                     <li>
 						<a href="AdminThongKe"> <i class="menu-icon fa fa-bar-chart"></i>Thống kê doanh thu</a>
                     </li>
-					<li class="menu-item-has-children">
-                        <a href="#"> <i class="menu-icon fa fa-cogs"></i>Teddy Shoes-2019</a>                    
-                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

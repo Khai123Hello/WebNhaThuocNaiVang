@@ -33,7 +33,7 @@
      Login/Register
     </h2>
     <div class="text-gray-600">
-     <a class="hover:underline" href="./Home">
+     <a class="hover:underline" href="Home">
       Home
      </a>
      <span>
