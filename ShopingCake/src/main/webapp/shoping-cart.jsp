@@ -162,7 +162,7 @@
                         <%
 								if (cart.countItems() > 0) {
 							%>
-                        <a href="checkout.jsp" class="primary-btn">Xử lý Thành thành toán</a>
+                        <a href="checkout.jsp" class="primary-btn">Xử lý thanh toán</a>
                         <%} %>
                     </div>
                 </div>
