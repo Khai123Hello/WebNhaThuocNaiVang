@@ -64,6 +64,18 @@
         </label>
         <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" id="pwd" name="user-password" placeholder="Password" required="" type="password"/>
        </div>
+       <!-- Hiển thị thông báo lỗi nếu có -->
+       <%
+          String error = (String) session.getAttribute("errorlogin");
+          if (error != null) {
+       %>
+       <div class="text-red-600 mb-4 text-center">
+         <%= error %>
+       </div>
+       <% 
+          session.removeAttribute("errorlogin"); // Xóa thông báo sau khi hiển thị
+          }
+       %>
        <div class="mt-3 text-center">
 							<h6><a href="forgot_password.jsp" style="text-decoration: none">Quên mật khẩu?</a></h6>
 						</div>
@@ -122,7 +134,7 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-4 text-center">
    <p>
-    © 2024 Your Website. All rights reserved.
+    © 2024 Web Nai Vàng Xin Chào.
    </p>
   </footer>
  </body>
