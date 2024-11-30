@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<div class="breadcrumb__text">
-						<h2>Organi Shop</h2>
+						<h2>NHÀ THUỐC NAI VÀNG</h2>
 						<div class="breadcrumb__option">
 							<a href="Home">Home</a> <span>Shop</span>
 						</div>
@@ -65,14 +65,14 @@
 								ArrayList<Category> category = (ArrayList<Category>) request.getAttribute("lstCategory");
 								for (Category ls : category) {
 								%>
-								<li><input type="checkbox"> <a
+								<li><!-- <input type="checkbox"> --> <a
 									href="HomeProductsServlet?id_category=<%=ls.getId()%>"><%=ls.getTenLoaiSanPham()%></a></li>
 								<%
 								}
 								%>
 							</ul>
 						</div>
-						<div class="sidebar__item">
+						<!-- <div class="sidebar__item">
 							<h4>Giá Cả</h4>
 							<div class="price-range-wrap">
 								<div
@@ -91,8 +91,8 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="sidebar__item sidebar__item__color--option">
+						</div> -->
+					<!-- 	<div class="sidebar__item sidebar__item__color--option">
 							<h4>Colors</h4>
 							<div class="sidebar__item__color sidebar__item__color--white">
 								<label for="white"> Trắng <input type="radio" id="white">
@@ -118,8 +118,8 @@
 								<label for="green"> Vàng <input type="radio" id="green">
 								</label>
 							</div>
-						</div>
-						<div class="sidebar__item">
+						</div> -->
+						<!-- <div class="sidebar__item">
 							<h4>Popular Size</h4>
 							<div class="sidebar__item__size">
 								<label for="large"> size lớn <input type="radio"
@@ -140,7 +140,7 @@
 								<label for="tiny"> Combo <input type="radio" id="tiny">
 								</label>
 							</div>
-						</div>
+						</div> -->
 						<div class="sidebar__item">
 							<div class="latest-product__text">
 								<h4>Sản Phẩm Mới</h4>
@@ -216,7 +216,7 @@
 				<div class="col-lg-9 col-md-7">
 					<div class="product__discount">
 						<div class="section-title product__discount__title">
-							<h2>Khuyến Mại</h2>
+							<h2>Sản phẩm</h2>
 						</div>
 						<div class="row">
 							<div class="product__discount__slider owl-carousel">
@@ -235,7 +235,7 @@
 											data-setbg="viewroot/img/shop/product/<%=ls.getAnhChinh()%>">
 											<div class="product__discount__percent"><%=ls.getKhuyenMai()%></div>
 											<ul class="product__item__pic__hover">
-												<li><a href="#"><i class="fa fa-heart"></i></a></li>
+												<!-- <li><a href="#"><i class="fa fa-heart"></i></a></li> -->
 												<li><a href="#"><i class="fa fa-retweet"></i></a></li>
 												<li><a href="#" onclick="addProductToCart(<%=ls.getId()%>)"><i class="fa fa-shopping-cart"></i></a></li>
 											</ul>
@@ -261,17 +261,17 @@
 					<div class="filter__item">
 						<div class="row">
 							<div class="col-lg-4 col-md-5">
-								<div class="filter__sort">
+<!-- 								<div class="filter__sort">
 									<span>Sort By</span> <select>
 										<option value="0">Default</option>
 										<option value="0">Default</option>
 									</select>
-								</div>
+								</div> -->
 							</div>
 							<div class="col-lg-4 col-md-4">
 								<div class="filter__found">
 									<h6>
-										<span>16</span> Products found
+										<span></span> Products found
 									</h6>
 								</div>
 							</div>
@@ -296,7 +296,7 @@
 								<div class="product__item__pic set-bg"
 									data-setbg="viewroot/img/shop/product/<%=ls.getAnhChinh()%>">
 									<ul class="product__item__pic__hover">
-										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+										<!-- <li><a href="#"><i class="fa fa-heart"></i></a></li> -->
 										<li><a href="#"><i class="fa fa-retweet"></i></a></li>
 										<li><a href="#" onclick="addProductToCart(<%=ls.getId()%>)"><i class="fa fa-shopping-cart"></i></a></li>
 									</ul>

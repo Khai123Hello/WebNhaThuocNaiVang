@@ -395,6 +395,7 @@ ol {
 
 .header__top__right__auth {
 	display: inline-block;
+	margin: 0 20px;
 }
 
 .header__top__right__auth a {
@@ -1103,6 +1104,16 @@ ol {
 	color: #1c1c1c;
 	line-height: 39px;
 	display: block;
+}
+
+.latest-product__text{
+	align-items: center;
+}
+
+.latest-product spad{
+	 display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
 }
 
 .sidebar__item .latest-product__text {

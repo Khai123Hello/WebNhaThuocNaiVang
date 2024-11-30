@@ -84,20 +84,20 @@
 				<div class="col-lg-6 col-md-6">
 					<div class="product__details__text">
 						<h3><%=product.getTenSanPham()%></h3>
-						<div class="product__details__rating">
+<!-- 						<div class="product__details__rating">
 							<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 								class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 								class="fa fa-star-half-o"></i> <span>(18 Đánh giá)</span>
-						</div>
+						</div> -->
 						<div class="product__details__price"><%=product.getGiaGoc()%>VND
 						</div>
-						<p>Nguyên liệu làm bánh ngọt không thể thiếu bột mì hoặc các
+<!-- 						<p>Nguyên liệu làm bánh ngọt không thể thiếu bột mì hoặc các
 							loại bột khác, trứng, đường, sữa, các loại đậu,...cùng các nguyên
 							liệu tạo hương vị thơm ngon như bơ, phô mai, matcha, vani,
 							socola,...Đây đều là những thành phần dinh dưỡng rất tốt cho sức
 							khỏe chứa nhiều protein, carbohydrate, vitamin và chất béo. Bánh
 							ngọt thường được làm chín bằng phương pháp nướng hoặc hấp nên hạn
-							chế được dầu mỡ</p>
+							chế được dầu mỡ</p> -->
 						<div class="product__details__quantity">
 							<div class="quantity">
 								<div class="pro-qty">
@@ -106,16 +106,16 @@
 							</div>
 						</div>
 						<a href="#" onclick="addProductToCart(<%=product.getId()%>)"
-							class="primary-btn">Thêm Sản Phẩm</a> <a href="#"
-							class="heart-icon"><span class="icon_heart_alt"></span></a>
+							class="primary-btn">Thêm Sản Phẩm</a> <!-- <a href="#"
+							class="heart-icon"><span class="icon_heart_alt"></span></a> -->
 						<ul>
 							<li><b>Trình Trạng</b> <%
  if (product.getTinhTrang() == 1) {
- %> <span>Còn Hàng </span> <%} else {%> <span>hết Hàng</span> <%
+ %> <span>Còn Hàng </span> <%} else {%> <span>Hết hàng</span> <%
  }
  %></li>
 
-							<li><b>Giao Hàng</b> <span>Trong vòng 24h <samp>Miễn
+							<li><b>Giao Hàng</b> <span>Trong vòng 24h  <samp>Miễn
 										phí Nội Thành </samp></span></li>
 							<li><b>Giảm Giá</b> <span><%=product.getKhuyenMai()%></span></li>
 							<li><b>Chịa sẻ</b>
@@ -134,11 +134,11 @@
 							<li class="nav-item"><a class="nav-link active"
 								data-toggle="tab" href="#tabs-1" role="tab" aria-selected="true">Mô
 									Tả</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab"
+		<!-- 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
 								href="#tabs-2" role="tab" aria-selected="false">Phòng cách</a></li>
 							<li class="nav-item"><a class="nav-link" data-toggle="tab"
 								href="#tabs-3" role="tab" aria-selected="false">Phương pháp
-									Bảo quản <span>(1)</span>
+									Bảo quản <span>(1)</span> -->
 							</a></li>
 						</ul>
 						<div class="tab-content">
@@ -150,7 +150,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="tab-pane" id="tabs-2" role="tabpanel">
+							<!-- <div class="tab-pane" id="tabs-2" role="tabpanel">
 								<div class="product__details__tab__desc">
 									<h6>Chưa cập nhâp</h6>
 
@@ -219,7 +219,7 @@
 										vào chai, hộp hoặc túi nilon và tiến hành hút chân không, tạo
 										môi trường yếm khí để vi sinh vật không thể phát triển</p>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -248,7 +248,7 @@
 						<div class="product__item__pic set-bg"
 							data-setbg="viewroot/img/shop/product/<%=list.get(i).getAnhChinh()%>">
 							<ul class="product__item__pic__hover">
-								<li><a href="#"><i class="fa fa-heart"></i></a></li>
+								<!-- <li><a href="#"><i class="fa fa-heart"></i></a></li> -->
 								<li><a href="#"><i class="fa fa-retweet"></i></a></li>
 								<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 							</ul>

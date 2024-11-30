@@ -49,31 +49,34 @@ public class AdminEditCategory extends HttpServlet {
 	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
+	        throws ServletException, IOException {
+	    request.setCharacterEncoding("UTF-8");
+	    response.setCharacterEncoding("UTF-8");
+	    response.setContentType("text/html; charset=UTF-8");
 
-		String id = request.getParameter("id");
-		String tenloai = request.getParameter("tenloai");
+	    String id = request.getParameter("id");
+	    String tenloai = request.getParameter("tenloai");
 
-		Category category = new Category();
-		category.setId(Long.parseLong(id));
-		category.setTenLoaiSanPham(tenloai);
+	    Category category = new Category();
+	    category.setId(Long.parseLong(id));
+	    category.setTenLoaiSanPham(tenloai);
 
-		CategoryBO categoryControl = new CategoryBO();
+	    CategoryBO categoryControl = new CategoryBO();
 
-		boolean check = categoryControl.editCategory(category);
-		if (check) {
-			HttpSession session = request.getSession();
-			session.setAttribute("Edit", "Success");
-			session.setMaxInactiveInterval(15);
-			response.sendRedirect("AdminListCategory");
-		} else {
-
-		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("AdminListCategory");
-		dispatcher.forward(request, response);
+	    boolean check = categoryControl.editCategory(category);
+	    if (check) {
+	        HttpSession session = request.getSession();
+	        session.setAttribute("Edit", "Success");
+	        session.setMaxInactiveInterval(15);
+	        response.sendRedirect("AdminListCategory"); // Chỉ dùng redirect
+	        return; // Kết thúc xử lý
+	    } else {
+	        // Logic khác (ví dụ: báo lỗi chỉnh sửa thất bại)
+	        request.setAttribute("error", "Edit failed");
+	        RequestDispatcher dispatcher = request.getRequestDispatcher("admin/pages/category/edit.jsp");
+	        dispatcher.forward(request, response);
+	    }
 	}
+
 
 }

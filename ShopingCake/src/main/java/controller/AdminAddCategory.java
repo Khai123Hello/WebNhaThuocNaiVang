@@ -38,24 +38,21 @@ public class AdminAddCategory extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		
-		Category category = new Category();
-		category.setTenLoaiSanPham(request.getParameter("tenloai"));
-		CategoryBO categoryControl = new CategoryBO();
-		boolean check = categoryControl.addCategory(category);
-		if(check==true) {
-			HttpSession session = request.getSession();
-			session.setAttribute("Add", "Success");
-			session.setMaxInactiveInterval(15);
-			response.sendRedirect("AdminListCategory");
-		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("AdminListCategory");
-		dispatcher.forward(request, response);
-		
-		
+	    request.setCharacterEncoding("UTF-8");
+	    response.setCharacterEncoding("UTF-8");
+	    response.setContentType("text/html; charset=UTF-8");
+
+	    Category category = new Category();
+	    category.setTenLoaiSanPham(request.getParameter("tenloai"));
+	    CategoryBO categoryControl = new CategoryBO();
+	    boolean check = categoryControl.addCategory(category);
+
+	    if (check) {
+	        HttpSession session = request.getSession();
+	        session.setAttribute("Add", "Success");
+	        session.setMaxInactiveInterval(15);
+	    }
+	    response.sendRedirect("AdminListCategory"); // Chỉ sử dụng sendRedirect
 	}
 
 }

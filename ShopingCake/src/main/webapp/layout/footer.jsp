@@ -21,22 +21,22 @@
     <script src="viewroot/js/main.js"></script>
    <script type="text/javascript">
    function addProductToCart(id) {
-var url="HomeCartServlet?status=add&id_product="+id;
-		$.ajax({
-			url : url,
-			type : "get",
-			success : function(response) {
-				console.log(response);
-		           var count= $("#count").text();
-		           var a = parseInt(count); 
-			    var carts=a+1;
-			    $("#count").html(""+carts+"");
-				alert("Thêm vào giỏ hành thành công" +count);
-			},
-			error : function(xhr) {
-				console.log("ERROR: ", e);
-			}
-		});
+	    var url = "HomeCartServlet?status=add&id_product=" + id;
+	    $.ajax({
+	        url: url,
+	        type: "get",
+	        success: function(response) {
+	            console.log(response);
+	            var count = $("#count").text(); 
+	            var a = parseInt(count); 
+	            var carts = a + 1;
+	            $("#count").html(carts);  // Update the cart count
+	            alert("Thêm vào giỏ hàng thành công. Số sản phẩm hiện có trong giỏ: " + carts);
+	        },
+	        error: function(xhr, e) {
+	            console.log("ERROR: ", e);
+	        }
+	    });
 	};
 </script>
     <script type="text/javascript">

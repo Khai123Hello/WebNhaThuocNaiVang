@@ -259,70 +259,9 @@
 	<section class="latest-product spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="latest-product__text">
-						<h4>Sản Phẩm Mới</h4>
-						<div class="latest-product__slider owl-carousel">
-							<%
-				for (int i=0;i<2;i++) {
-					if(i==0){
-						
-			%>
-
-							<div class="latest-prdouct__slider__item">
-								<%
-							int count=0;
-				for (Products ls : products) {
-					if(count<4 && ls.getId_loaiSanPham()==7){
-						count++;
-					
 				
-			%>
-								<a href="#" class="latest-product__item">
-									<div class="latest-product__item__pic">
-										<img src="viewroot/img/shop/product/<%=ls.getAnhChinh()%>"
-											alt="">
-									</div>
-									<div class="latest-product__item__text">
-										<h6><%=ls.getTenSanPham()%>"
-										</h6>
-										<span><%=ls.getGiaGoc()%>"</span>
-									</div>
-								</a>
-								<%} }%>
-							</div>
-							<% } else{ %>
-
-							<div class="latest-prdouct__slider__item">
-
-								<%
-							int count=0;
-				for (Products ls : products) {
-					if(count<4 && ls.getId_loaiSanPham()==7){
-						count++;
-					
-				
-			%>
-								<a href="#" class="latest-product__item">
-									<div class="latest-product__item__pic">
-										<img src="viewroot/img/shop/product/<%=ls.getAnhChinh()%>"
-											alt="">
-									</div>
-									<div class="latest-product__item__text">
-										<h6><%=ls.getTenSanPham()%>"
-										</h6>
-										<span><%=ls.getGiaGoc()%>"</span>
-									</div>
-								</a>
-								<%} }%>
-							</div>
-							<%}} %>
-						</div>
-
-					</div>
-
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<%-- <div class="col-lg-4 col-md-6">
 					<div class="latest-product__text">
 						<h4>Sản Phẩm Bán Chạy</h4>
 						<div class="latest-product__slider owl-carousel">
@@ -448,7 +387,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --%>
 	<!-- Latest Product Section End -->
 
 	

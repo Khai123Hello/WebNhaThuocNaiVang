@@ -54,7 +54,7 @@
 	<div class="humberger__menu__wrapper">
 		<div class="humberger__menu__logo">
 			<div class="header__logo custom-logo">
-				<img id="logo_image" src="https://drive.google.com/file/d/15DSVmT_n_NFrcvgohWs5087c55FXFodw/view?usp=sharing" alt="logo" />
+				<img id="logo_image" src="viewroot/img/logo/deer_logo.png" alt="logo" />
 				<span class="brand-name">NHÀ THUỐC NAI VÀNG</span>
 			</div>
 		</div>
